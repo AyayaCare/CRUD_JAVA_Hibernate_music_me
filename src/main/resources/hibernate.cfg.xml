@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 5.3//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="hbm2ddl.auto">validate</property>
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">true</property>
+        <!--THIS IS NOT NECESSARY SINCE Hibernate 7
+         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>-->
+        <property name="connection.url">jdbc:mysql://localhost:3306/yourdb</property>
+        <property name="connection.username">yourussr</property>
+        <property name="connection.password">yourpsswd</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <mapping class="org.example.entity.ArtistEntity"/>
+        <mapping class="org.example.entity.SongsEntity"/>
+
+    </session-factory>
+</hibernate-configuration>
